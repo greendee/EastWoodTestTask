@@ -12,7 +12,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',             # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '/var/tmp/EastWoodTestTask/db.sqlite3',   # Or path to database file if using sqlite3.
+        'NAME': 'D:/projects/testwood.sqlite3',   # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': '',
         'PASSWORD': '',
@@ -122,6 +122,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'EastWoodTestTask',
+    'employees'
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
