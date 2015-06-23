@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load common_tags %}
+{% block body %}
+{% for group_name, group_count, group_link in groups %}
+<a class="btn btn-primary" href="{{ group_link }}">{{ group_name }}:{{ group_count}}</a>
+{% endfor %}
+<br/>
+<br/>
+<ul>
+{% for object in object_list %}
+<li>
+    {{ object|model_link }}
+</li>
+{% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load common_tags %}
+{% block page_header %}
+Список Отделов
+{% endblock %}
+{% block body %}
+
+<ul>
+{% for object in object_list %}
+<li>
+    {{ object|model_link }}
+    <a class="btn btn-default" href="{% url 'employees:employee:list' %}?department={{ object.pk }}">Список сотрудников</a>
+</li>
+{% endfor %}
+</ul>
+
+{% include 'employees/elements/paginator.html' %}
+{% endblock %}

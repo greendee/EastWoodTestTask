@@ -1,0 +1,17 @@
+{% extends 'employees/base/detail_base.html' %}
+{% block page_header %}
+Отдел {{ object.name }}
+{% endblock %}
+{% block fields %}
+<tr>
+<td>
+    Название
+</td>
+<td>
+    {{ object.name }}
+</td>
+<td>
+    <a class="btn btn-default"  href="{% url 'employees:employee:list' %}?department={{ object.pk }}">Список сотрудников</a>
+</td>
+</tr>
+{% endblock %}

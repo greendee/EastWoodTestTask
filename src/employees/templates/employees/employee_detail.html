@@ -1,0 +1,12 @@
+{% extends 'employees/base/detail_base.html' %}
+{% load common_tags %}
+{% block fields %}
+<tr><td>Фио</td><td>{{ object.surname }} {{ object.name }} {{ object.patronymic }}</td></tr>
+<tr><td>Должность</td><td>{{ object.position }}</td></tr>
+<tr><td>Отдел</td><td>{{ object.department|model_link }}</td></tr>
+<tr><td>Дата рождения</td><td>{{ object.birth_date }}</td></tr>
+<tr><td>E-mail</td><td><a href="mailto:{{ object.email }}">{{ object.email }}</a></td></tr>
+<tr><td>Телефон</td><td>{{ object.phone }}</td></tr>
+<tr><td>Дата начала работы</td><td>{{ object.date_work_start }}</td></tr>
+<tr><td>Дата окончания работы</td><td>{{ object.date_work_end|default:"еще работает" }}</td></tr>
+{% endblock %}

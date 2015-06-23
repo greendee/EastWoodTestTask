@@ -1,11 +1,21 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html>
 <head>
     <title>{% block title %}{% endblock %}</title>
     <meta charset="utf8">
+    <link rel="stylesheet" href="{% static '/static/EastWoodTestTask/css/bootstrap.min.css' %}"/>
 </head>
 <body>
+{% include 'elements/navbar.html' %}
+<div class="container-fluid">
+<h3 class="h3">
+{% block page_header %}
+{% endblock %}
+</h3>
+
 {% block body %}
 {% endblock %}
+</div>
 </body>
 </html>
