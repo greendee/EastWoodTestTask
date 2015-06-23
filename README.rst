@@ -1,10 +1,2 @@
-
-Template for django startproject command:
-
-https://docs.djangoproject.com/en/1.4/ref/django-admin/#django-admin-startproject
-
-Usage:
-
-::
-
-    django-admin.py startproject --template=https://github.com/subuk/django-egg-template/archive/master.zip myproject
+This is my Test task.
+There is no currently any tests implemented, i have no idea, what need to test here.
